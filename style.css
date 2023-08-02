@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --sedans: hsl(31, 77%, 52%);
+    --suvs: hsl(184, 100%, 22%);
+    --luxury: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings--buttons: hsl(0, 0%, 95%);
+    --font-size: 0.975rem;
+    --Big-Soulders: 'Big Shoulders Display', sans-serif;
+    --Lexend: 'Lexend Deca', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+p,h1,h2,h3,h4,h5,h6{
+    overflow-wrap: break-word;
+}
+body{
+    background: var(--background-headings--buttons);
+    font-size: var(--font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 1.5rem;
+    border-radius: 7px;
+    overflow: hidden;
+    max-width: 25rem;
+}
+.column{
+    padding: 3rem;
+    display: grid;
+    gap: .5rem;
+}
+.column h1{
+    color: var(--background-headings--buttons);
+    font-family: var(--Big-Soulders);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+.column p{
+    color: var(--paragraphs);
+    font-family: var(--Lexend);
+    line-height: 1.5rem;  
+}
+.column button{
+    background: var(--background-headings--buttons);
+    margin-top: 1.5rem;
+    font-family: var(--Lexend);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 3rem;
+    width: fit-content;
+    cursor: pointer;
+    transition: all .3 ease-in-out;
+}
+.column button:hover{
+    background: transparent;
+    color: var(--background-headings--buttons);
+    border: 2px solid var(--background-headings--buttons);
+}
+.sedans{
+    background: var(--sedans);
+}
+.suvs{
+    background: var(--suvs);
+}
+.luxury{
+    background: var(--luxury);
+}
+.sedans button{
+    color: var(--sedans);
+}
+.suvs button{
+    color: var(--suvs);
+}
+.luxury button{
+    color: var(--luxury);
+}
+@media screen and (min-width: 75rem){
+    .container{
+        display: flex;
+        max-width: 59rem;
+    }
+    .column button{
+        margin-top: 4rem;
+    }
+}
